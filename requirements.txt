@@ -1,0 +1,16 @@
+beautifulsoup4==4.11.2
+Flask==2.2.3
+Flask_Bootstrap==3.3.7.1
+Flask_CKEditor==0.4.4.1
+Flask_Gravatar==0.5.0
+Flask_Login==0.6.2
+flask_sqlalchemy==3.0.3
+Flask_WTF==1.1.1
+pandas==1.5.3
+recipe_scrapers==14.32.0
+requests==2.24.0
+selenium==4.8.2
+SQLAlchemy==2.0.4
+webdriver_manager==3.8.5
+Werkzeug==2.2.3
+WTForms==2.3.3

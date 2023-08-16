@@ -1,0 +1,45 @@
+{% include "Test_Header.html" %}
+
+
+    <div class="container mt-5 pb-5">
+      <h2>Search Results:</h2>
+      <div class="card-deck">
+        {% for recipe in recipes %}
+        <div class="card text-break" >
+             <a href="{{recipe.canonical_url}}">
+          <div class="front p-3" style="background-image: url('{{ recipe.image }}');">
+            <div class="card-body">
+              <p class="card-back-title">{{ recipe.title }}</p>
+              <p class="card-back-totaltime">{{recipe.total_time}}</p>
+              <p class="card-back-text">{{recipe.author}}</p>
+              <p class="card-back-text">{{recipe.host}}</p>
+            </div>
+          </div>
+               </a>
+          <div class="back p-4">
+            <div>
+              <div><p class="overview">
+
+                {{ recipe.ingredients }}
+                <!--
+                <ul class="list-group">
+                  <li class="list-group-item active">Ingredients</li>
+                  {% for ingredient in recipe.ingredients %}
+                  <li class="list-group-item">{{ ingredient }}</li>
+                  {% endfor %}
+                </ul>
+                -->
+                </p></div>
+              <div class="mt-4">
+                <a href="{{recipe.canonical_url}}" class="button">Visit</a>
+                <a href="" class="button delete-button">Remove from list</a>
+              </div>
+              </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+
+{% include "Test_Footer.html" %}

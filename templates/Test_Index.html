@@ -1,0 +1,25 @@
+{% include "Test_Header.html" %}
+
+    <div id="search_container">
+
+        <div class="container mt-5 pt-5">
+          <div class="row justify-content-center">
+            <div class="col-lg-6 text-center">
+              <!-- Centered image -->
+              <img id="recipe_logo" src="{{url_for('static', filename='img/Cartoon_croissant.png')}}" alt="Croissant logo">
+              <form action="{{ url_for('search_home') }}" method="post">
+                <div class="input-group">
+                  <input type="text" id="search_str" name="search_str" placeholder="Search for recipes" aria-label="Search" aria-describedby="search-addon" class="form-control">
+                  <div class="input-group-append">
+                    <button type="submit" value="OK" class="btn btn-primary">Search</button>
+                  </div>
+                  <div class="input-group-append">
+                    <button type="button" class="btn btn-outline-secondary">Random Recipe</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+    </div>
+{% include "Test_Footer.html" %}
